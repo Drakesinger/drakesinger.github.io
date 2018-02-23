@@ -581,6 +581,10 @@
 		position: relative;
 	}
 
+		.icon.padright {
+			padding-right: 5px;
+		}
+
 		.icon:before, .fas:before{
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
@@ -592,6 +596,17 @@
 
 		.icon > .label {
 			display: none;
+		}
+
+		.icon.center {
+			display: block;
+			text-align: center;
+		}
+		.icon.big {
+			font-size: 5em;
+		}
+		.icon.medium {
+			font-size: 2.25em;
 		}
 
 /* Image */
@@ -719,6 +734,34 @@
 					padding-top: 0;
 				}
 
+
+		ul.enumeration {
+			list-style: none;
+			cursor: default;
+			padding-left: 0;
+			margin-left: 0;
+		}
+
+			/* ul.enumeration.dash li + li::before {
+				content: " / ";
+				color: aqua;
+			} */
+
+			ul.enumeration li {
+				padding-right: 5px;
+				display: inline;
+				text-align: center;
+			}
+			
+			ul.enumeration li {
+				border-left: solid 1px #969494;
+			}
+
+			ul.enumeration li:first-child {
+				border-left: none;
+				padding-left: 0;
+			}
+
 		ul.icons {
 			cursor: default;
 			list-style: none;
@@ -762,6 +805,7 @@
 				display: inline-block;
 				padding: 0 1rem 0 0;
 				vertical-align: middle;
+				/* margin-bottom: 1rem; */
 			}
 
 				ul.actions li:last-child {
@@ -2425,3 +2469,64 @@ body.is-loading .items.onload-fade-in > * > .inner {
 	.items.style2 > * {
 		border-color: #ffffff3a;
 	}
+
+/* Items Icons */
+
+.items .icon {
+	margin-bottom: 5px;
+}
+
+.items .icon.bordered:before {
+	text-align: center;
+	border-radius: 100%;
+	box-shadow: inset 0 0 0 1px #ffffff;
+	display: inline-block;
+	line-height: 2.25rem;
+	width: 2.25rem;
+}
+	.items .icon.bordered.small:before {
+		line-height: 2.25rem;
+		width: 2.25rem;
+	}
+
+	.items .icon.bordered.medium:before {
+		line-height: 4rem;
+		width: 4rem;
+		/* margin-bottom: 5px; */
+	}
+
+	.items .icon.bordered.big:before {
+		line-height: 8rem;
+		width: 8rem;
+		/* margin-bottom: 5px; */
+	}
+
+/* Modifiers */
+
+.center {
+	text-align: center;
+}
+
+.inline {
+	display: inline;
+}
+
+.block {
+	display: block;
+}
+
+.no-top-margin {
+	margin-top: 0 !important;
+}
+
+.no-bottom-margin {
+	margin-bottom: 0 !important;
+}
+
+.small-top-margin {
+	margin-top: 10px !important;
+}
+
+.small-bottom-margin {
+	margin-bottom: 10px !important;
+}

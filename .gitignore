@@ -1,0 +1,13 @@
+.vscode/
+
+# Vistas
+*/vistas/*
+
+# Zips
+*.zip
+
+# Elements
+elements.html
+
+# Logos
+*/logos/*
